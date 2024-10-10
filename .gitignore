@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # The cargo lockfile
 Cargo.lock
+package-lock.json
 
 node_modules
 dist
