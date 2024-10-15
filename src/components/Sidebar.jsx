@@ -1,14 +1,12 @@
+import "./Sidebar.css";
+
 function Sidebar() {
 
     return (
-        <div style={{
-            width: "200px",
-            backgroundColor: "rgba(0, 0, 0, 0.2)",
-            display: "flex",
-            flexDirection: "column",
-        }} className="sidebar">
+        <div className="sidebar">
+
             <h1>System Pane</h1>
-            <hr style={{ width: "100%" }} />
+            <hr />
 
             <a href="/dp/cpu">CPU</a>
             <a href="/dp/gpu">GPU</a>
