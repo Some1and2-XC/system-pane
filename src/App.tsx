@@ -24,7 +24,18 @@ function App() {
 
             <div className="container">
 
-                <code>Here are some graphs of the thing</code>
+                <h1>CPU Utilization</h1>
+
+                <div className="box-container">
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                    <div className="skeleton-box"></div>
+                </div>
+
                 <form
                     className="row"
                     onSubmit={(e) => {
