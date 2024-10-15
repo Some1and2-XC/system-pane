@@ -1,0 +1,4 @@
+sudo apt install libgtk-5-dev -y
+sudo apt install libwebkit2gtk-4.1-dev -y
+sudo apt install librsvg2 -y
+sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
