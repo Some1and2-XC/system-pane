@@ -1,19 +1,17 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
 import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
+import Home from "./pages/Home";
+
+import Cpu from "./datapoints/Cpu";
+import Gpu from "./datapoints/Gpu";
+import Ram from "./datapoints/Ram";
+import Disk from "./datapoints/Disk";
+import Network from "./datapoints/Network";
 
 function App() {
-    const [greetMsg, setGreetMsg] = useState("");
-    const [name, setName] = useState("");
-
-    async function greet() {
-        // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-        setGreetMsg(await invoke("greet", { name }));
-    }
 
     return (
         <div style={{
@@ -21,30 +19,22 @@ function App() {
             width: "100vw",
             minHeight: "100%",
         }}>
+            <BrowserRouter>
+                <Routes>
+
+                    <Route index element={<Home />} />
+
+                    {/* The `dp` stands for `datapoint` */}
+                    <Route path="/dp/cpu"     element={<Cpu     />} />
+                    <Route path="/dp/gpu"     element={<Gpu     />} />
+                    <Route path="/dp/ram"     element={<Ram     />} />
+                    <Route path="/dp/disk"    element={<Disk    />} />
+                    <Route path="/dp/network" element={<Network />} />
+
+                </Routes>
+            </BrowserRouter>
             <Sidebar />
 
-            <div className="container">
-
-                <h1>CPU Utilization</h1>
-                <Chart />
-
-                <form
-                    className="row"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        greet();
-                    }}
-                >
-                    <input
-                        id="greet-input"
-                        onChange={(e) => setName(e.currentTarget.value)}
-                        placeholder="Enter a name..."
-                    />
-                    <button type="submit">Greet</button>
-                </form>
-
-                <p>{greetMsg}</p>
-            </div>
         </div>
     );
 }
