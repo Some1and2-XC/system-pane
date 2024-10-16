@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
-import Chart from "./components/Chart";
 
 import Home from "./pages/Home";
 
@@ -21,6 +20,8 @@ function App() {
             width: "100vw",
             minHeight: "100%",
         }}>
+            <Sidebar />
+
             <BrowserRouter>
                 <Routes>
 
@@ -35,8 +36,6 @@ function App() {
 
                 </Routes>
             </BrowserRouter>
-            <Sidebar />
-
         </div>
     );
 }
