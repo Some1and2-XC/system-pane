@@ -102,16 +102,6 @@ button {
     padding: 0;
 }
 
-.skeleton-box {
-    height: 200px;
-    width: 300px;
-    background-color: red;
-}
-
-.skeleton-box::after {
-    content: "Some Chart";
-}
-
 #greet-input {
     margin-right: 5px;
 }

@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
 
 import Sidebar from "./components/Sidebar";
+import Chart from "./components/Chart";
 
 function App() {
     const [greetMsg, setGreetMsg] = useState("");
@@ -25,16 +26,7 @@ function App() {
             <div className="container">
 
                 <h1>CPU Utilization</h1>
-
-                <div className="box-container">
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                    <div className="skeleton-box"></div>
-                </div>
+                <Chart />
 
                 <form
                     className="row"
