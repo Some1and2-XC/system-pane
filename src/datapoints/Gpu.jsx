@@ -1,9 +1,14 @@
+import Chart from "../components/Chart";
+
 function Gpu() {
-    return (<>
-        <h1>This section is for GPU Data!</h1>
-        <hr />
-        <p>Isn't that crazy?</p>
-    </>);
+
+    return (
+        <div className="container">
+            <h1>GPU Utilization</h1>
+            <Chart />
+        </div>
+    );
+
 }
 
 export default Gpu;

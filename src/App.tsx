@@ -1,8 +1,10 @@
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import Chart from "./components/Chart";
+
 import Home from "./pages/Home";
 
 import Cpu from "./datapoints/Cpu";

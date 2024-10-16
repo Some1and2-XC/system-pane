@@ -1,9 +1,14 @@
+import Chart from "../components/Chart";
+
 function Ram() {
-    return (<>
-        <h1>This section is for RAM Data!</h1>
-        <hr />
-        <p>Isn't that crazy?</p>
-    </>);
+
+    return (
+        <div className="container">
+            <h1>RAM Utilization</h1>
+            <Chart />
+        </div>
+    );
+
 }
 
 export default Ram;

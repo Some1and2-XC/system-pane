@@ -1,9 +1,14 @@
+import Chart from "../components/Chart";
+
 function Disk() {
-    return (<>
-        <h1>This section is for Disk Data!</h1>
-        <hr />
-        <p>Isn't that crazy?</p>
-    </>);
+
+    return (
+        <div className="container">
+            <h1>Disk Utilization</h1>
+            <Chart />
+        </div>
+    );
+
 }
 
 export default Disk;

@@ -1,9 +1,14 @@
+import Chart from "../components/Chart";
+
 function Cpu() {
-    return (<>
-        <h1>This section is for CPU Data!</h1>
-        <hr />
-        <p>Isn't that crazy?</p>
-    </>);
+
+    return (
+        <div className="container">
+            <h1>CPU Utilization</h1>
+            <Chart />
+        </div>
+    );
+
 }
 
 export default Cpu;

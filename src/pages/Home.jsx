@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { invoke } from "@tauri-apps/api/core";
+import Chart from "../components/Chart";
 
 function Home() {
 
@@ -12,26 +13,10 @@ function Home() {
     }
 
     return (
+
         <div className="container">
-            <h1>CPU Utilization</h1>
+            <h1>This is the home page!</h1>
             <Chart />
-
-            <form
-                className="row"
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    greet();
-                }}
-            >
-                <input
-                    id="greet-input"
-                    onChange={(e) => setName(e.currentTarget.value)}
-                    placeholder="Enter a name..."
-                />
-                <button type="submit">Greet</button>
-            </form>
-
-            <p>{greetMsg}</p>
         </div>
 
     );

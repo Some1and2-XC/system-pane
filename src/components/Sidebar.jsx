@@ -5,7 +5,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
 
-            <h1>System Pane</h1>
+            <h1><a href="/">System Pane</a></h1>
             <hr />
 
             <a href="/dp/cpu">CPU</a>
